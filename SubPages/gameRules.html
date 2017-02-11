@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Spielregeln</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- <link rel="stylesheet" href="../css/list.design.css"> -->
+        <link rel="stylesheet" href="../css/bootstrap.list.design.css">
+        <link rel="stylesheet" href="../css/SubPages.design.css/gameRules.css">
+        <link rel="stylesheet" href="../css/SubPages.design.css/gameRules.table.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">MoneyGame</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Game rules<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="gameRules.html">default Moneygame</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="download.html">Download</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="register.html"><span class="glyphicon glyphicon glyphicon-registration-mark"></span>Registration</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1><span style="color:#ffd700">Spielregeln</span></h1>
+
+        <div class="textalign">In einer Runde Moneygame können bis zu 10 Spieler teilnehmen, die jeweils
+            eine <div class="tooltip"> Ante <span class="tooltiptext">Ein Zwangsbeitrag, den jeder Spieler zahlen muss, damit
+                    das Spiel los gehen kann</span></div> bezahlen müssen. Nach diesem Einsatz geht die erste Runde los: Alle Spieler
+            setzten einen x-beliebigen Geldbetrag in den Pot. Nachdem dies geschehen ist, werden die 3 Spieler mit dem
+            geringsten Einsatz ausgeschieden. Die restlichen 7 kommen in die 2. Runde und betten weiter um den Pot. Der
+            Geldbetrag, der bisher gesetzt wurde, bleibt bestehen, jedoch können die Gegenspieler diesen Bet jetzt sehen.
+            Nachdem ....
+        </div>
+
+        <div class="textalign">
+
+            <div id ="container">
+                <div id="firstseat" class="player"></div>
+                <div id="seat1Chips" class="chips cmove1"> 10$</div>
+
+                <div id="secondseat" class="player"></div>
+                <div id="seat2Chips" class="chips cmove2">8$</div>
+
+                <div id="thirdseat" class="player"></div>
+                <div id="seat3Chips" class="chips cmove3">7$</div>
+
+                <div id="fourthseat" class="player"></div>
+                <div id="seat4Chips" class="chips cmove4">12$</div>
+
+                <div id="fifthseat" class="player"></div>
+                <div id="seat5Chips" class="chips cmove5">21$</div>
+
+                <div id="sixthseat" class="player"></div>
+                <div id="seat6Chips" class="chips cmove6"></div>
+
+                <div id="pot"></div>
+
+                <div id="buttonHolder">
+                    <button id="loadButton">Start animation</button>
+                    <div id="buttondiv" class="two"></div>
+                </div>
+
+
+                <table id="tabledesign">
+                    <caption><span style="color:#ffd700">Table standings</span></caption>
+                    <thead>
+                        <tr>
+                            <th><a>Playername</a></th>
+                            <th><a>Position</a></th>
+                            <th>Stacksize</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td id="olePl"></td>
+                        <td id="olePo"></td>
+                        <td id="oleSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="benPl"></td>
+                        <td id="benPo"></td>
+                        <td id="benSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="lucasPl"></td>
+                        <td id="lucasPo"></td>
+                        <td id="lucasSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="johnPl"></td>
+                        <td id="johnPo"></td>
+                        <td id="johnSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="askmewhateverPl"></td>
+                        <td id="askmewhateverPo"></td>
+                        <td id="askmewhateverSt"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <br><br><br><br><br>
+        <div class="container">
+            <h3>Tooltip Example</h3>
+            <p>Tooltips are not CSS-only plugins, and must therefore be initialized with jQuery: select the specified element and call the tooltip() method.</p>
+            <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+        </div>
+
+
+
+        <nav class="navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-fixed-bottom">
+                    <ul class="nav navbar-nav">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="support.html">Unser Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script type="text/javascript" src="../js/gameRules.js"></script>
+        <script type="text/javascript" src="../js/gameRules.table.js"></script>
+        <script type="text/javascript" src="../javascript.file.js"></script>
+        <script type="text/javascript" src="../lib/move.js"></script>
+    </body>
+</html>

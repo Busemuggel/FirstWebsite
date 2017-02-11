@@ -1,0 +1,71 @@
+.active{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-inverse {
+    border: 3px solid black;
+   //  border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    //background-color: rgba(192,50,50,0.7);
+    background-color: rgba(48,48,48,0.7);
+    border-width: 0px 0px 3px 0px;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;   
+    position: fixed;
+   
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 0%;
+    z-index: 2;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffd700;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color : green;
+ // border-right: 1px solid gold;
+}
+
+.navbar-fixed-bottom {
+    border: 3px solid black;
+  //  border-bottom: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    background-color:rgba(48,48,48,0.7);
+    border-width: 3px 0px 0px 0px;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    
+    //padding-bottom: 1.5%;
+    //padding-top: 0.7%;
+    //margin-top: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 0%;
+    overflow: hidden;
+  //  opacity: 0.7;
+    z-index: 2;
+}
+
+.navbar-fixed-bottom .navbar-nav > li > a {
+    color: green;
+}
+
+.navbar-fixed-bottom .navbar-nav > li > a:hover {
+    color: white;
+    background-color: transparent; 
+}

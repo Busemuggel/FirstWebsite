@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Understanding variables</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="animation.style.css">
+    </head>
+    <body>
+        <div id ="container" >
+            <div id ="animate" onmousedown="onMDown(this)" onmouseup="onMUp(this)">
+            </div>
+        </div>
+        <br>
+        <div>
+            <button id="myBtnRight" onclick="rightMove()">right</button>
+            <button id="myBtnBottom" onclick="bottomMove()">bottom</button>
+        </div>
+
+        <h3> Moves:</h3>
+        <p id="textField"></p>
+
+        <script src="animation.js"></script>
+    </body>
+</html>

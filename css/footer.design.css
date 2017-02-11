@@ -1,0 +1,77 @@
+.footer {
+    border: 3px solid black;
+  //  border-bottom: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    background-color:rgba(48,48,48,0.7);
+    border-width: 3px 0px 0px 0px;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    
+    //padding-bottom: 1.5%;
+    //padding-top: 0.7%;
+    //margin-top: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 0%;
+    overflow: hidden;
+  //  opacity: 0.7;
+    z-index: 2;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 0%;
+    overflow: hidden;
+  //  background-color: #303030;  not rly needed
+}
+
+.headingLink li {
+   float: left;
+   border-right: 1px solid gold;
+ //  overflow: auto;     ...frage an ole
+}
+
+.headingLink li:last-child {
+    border-right: none;
+}
+
+.headingLink li a {
+ //   left: 0;
+    display: block;
+    color: green;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+
+.headingLink li a:hover {
+   // background-color: #303030;
+    color: white;
+    //color:navy;
+}
+
+.headingLink li a.active_side {
+   // background-color: #00C800;
+    background-color: #4CAF50;
+    color: navy;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+ul.headingLink li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.headingLink li.right, ul.headingLink li.right, 
+    ul.headingLink li {float: none;}
+}
+
+
+

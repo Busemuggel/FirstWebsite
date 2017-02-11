@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hier anmelden</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/footer.design.css">
+        <link rel="stylesheet" href="../css/SubPages.design.css/register.design.css">
+        <link rel="stylesheet" href="../index.html">
+        <script src="../javascript.file.js"></script>
+    </head>
+    <body>
+
+        <form action="register.page.php">   <!-- muss ich noch verstehen diese zeile -->
+            User name:<br>
+            <input type="text" name="username" placeholder="User name" value="" autofocus required><br>
+            First name:<br>
+            <input type="text" name="firstname" placeholder="First name" value="" required><br>
+            Last name:<br>
+            <input type="text" name="lastname" placeholder="Last name" value="" required><br>
+            date of birth:<br>
+            <input id="birth" type="date" name="bday" required><br><br>  <!-- not supported in ie11 or firefox -->
+            Gender:<br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="shemale"> Shemale
+            <input type="radio" name="gender" value="other"> other
+            <br><br>
+
+            E-Mail address:<br>
+            <input type="text" name="e_mail_address" placeholder="E-Mail address" required><br>
+            Password:<br>
+            <input type="password" name="psw" placeholder="Password" pattern="{6+}" required><br>
+            Encryption:<br>
+            <keygen name="security"><br><br>
+            <input type="submit" onclick="checkDate();" value="Agreed">
+            <br><br>
+
+
+            Country/State:<br>
+            <select id="country" name="country">
+                <option value="au">Australia</option>
+                <option value="ca">Canada</option>
+                <option value="usa">USA</option>
+            </select><br><br>
+        </form>
+    </body>
+</html>
