@@ -49,15 +49,11 @@
 
         <h1><span style="color:#ffd700">Spielregeln</span></h1>
 
-        <div class="textalign">In einer Runde Moneygame können bis zu 10 Spieler teilnehmen, die jeweils
-            eine <div class="tooltip"> Ante <span class="tooltiptext">Ein Zwangsbeitrag, den jeder Spieler zahlen muss, damit
-                    das Spiel los gehen kann</span></div> bezahlen müssen. Nach diesem Einsatz geht die erste Runde los: Alle Spieler
-            setzten einen x-beliebigen Geldbetrag in den Pot. Nachdem dies geschehen ist, werden die 3 Spieler mit dem
-            geringsten Einsatz ausgeschieden. Die restlichen 7 kommen in die 2. Runde und betten weiter um den Pot. Der
-            Geldbetrag, der bisher gesetzt wurde, bleibt bestehen, jedoch können die Gegenspieler diesen Bet jetzt sehen.
-            Nachdem ....
-        </div>
+        <div id="content" class="textalign">
 
+        </div>
+        <div id="news"></div>
+        <div id="date"></div>
         <div class="textalign">
 
             <div id ="container">
@@ -83,6 +79,8 @@
 
                 <div id="buttonHolder">
                     <button id="loadButton">Start animation</button>
+                    <button id="foldButton">Fold</button>
+                    <button id="betButton">Bet</button>
                     <div id="buttondiv" class="two"></div>
                 </div>
 
@@ -120,6 +118,11 @@
                         <td id="askmewhateverPl"></td>
                         <td id="askmewhateverPo"></td>
                         <td id="askmewhateverSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="AdolfPl"></td>
+                        <td id="AdolfPo"></td>
+                        <td id="AdolfSt"></td>
                     </tr>
                 </table>
             </div>

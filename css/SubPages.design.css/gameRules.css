@@ -130,13 +130,15 @@
     text-align:center;
 }
 
-#previousButton {
+#foldButton {
+    display: none;
     width: 120px;
     height: 50px;
-    right: 120px;
+    left: -120px;
 }
 
-#nextButton {
+#betButton {
+    display: none;
     width: 120px;
     height: 50px;
     left: 0px;
