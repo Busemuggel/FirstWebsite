@@ -42,13 +42,11 @@
 #firstseat {
     left: 10%;
     top: 20%;
- //   vertical-align: central;
 }
 
 #secondseat {
     left: 40%;
     top: 10%;
-//    vertical-align: -20px;
 }
 
 #thirdseat {
@@ -119,10 +117,12 @@
 }
 
 #loadButton {
+    position: relative;
     display: block; 
-    margin: 0 auto;
+    margin: 0;
     width: 120px;
     height: 50px;
+    left: 120px;
 }
 
 .two {
@@ -134,12 +134,13 @@
     display: none;
     width: 120px;
     height: 50px;
-    left: -120px;
+    left: 60px;
 }
 
 #betButton {
     display: none;
     width: 120px;
     height: 50px;
-    left: 0px;
+    left: 180px;
+    bottom: 50px;
 }

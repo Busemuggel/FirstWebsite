@@ -62,12 +62,53 @@ $(document).ready(function () {
     });
     $.getJSON("http://localhost/Firstwebsite/server/matchService.php?players=0", 
       function(data){
-            document.getElementById("firstseat").innerHTML = data[0].playerName + "<br>" + data[0].stacksize;
-            document.getElementById("secondseat").innerHTML = data[1].playerName + "<br>" + data[1].stacksize; 
-            document.getElementById("thirdseat").innerHTML = data[2].playerName + "<br>" + data[2].stacksize;
-            document.getElementById("fourthseat").innerHTML = data[3].playerName + "<br>" + data[3].stacksize;
-            document.getElementById("fifthseat").innerHTML = data[4].playerName + "<br>" + data[4].stacksize;
-            document.getElementById("sixthseat").innerHTML = data[5].playerName + "<br>" + data[5].stacksize;
+
+            $('#loadButton').click(function() {
+                //set player value into the seats
+                $('#firstseat').html(data[0].playerName + '<br>' + data[0].stacksize);
+                $('#secondseat').html(data[1].playerName + '<br>' + data[1].stacksize);
+                $('#thirdseat').html(data[2].playerName + '<br>' + data[2].stacksize);
+                $('#fourthseat').html(data[3].playerName + '<br>' + data[3].stacksize);
+                $('#fifthseat').html(data[4].playerName + '<br>' + data[4].stacksize);
+                $('#sixthseat').html(data[5].playerName + '<br>' + data[5].stacksize);
+
+                //set table to visible/invisible
+                hideButton("loadButton");
+                showButton("foldButton");
+                showButton("betButton");
+
+                //sets player-colors darker
+                var colors = document.getElementsByClassName("player");
+                for(i=0; i<colors.length; i++) {
+                colors[i].style.backgroundColor = "#B0B0B0";
+                }
+
+                //secondPlayer onMove
+                document.getElementById("secondseat").style.borderColor = "blue";     // Frage
+
+                $('#olePl').html(data[0].playerName);
+                $('#olePo').html(data[0].position);
+                $('#oleSt').html(data[0].stacksize);
+
+                $('#benPl').html(data[1].playerName);
+                $('#benPo').html(data[1].position);
+                $('#benSt').html(data[1].stacksize);
+
+                $('#lucasPl').html(data[2].playerName);
+                $('#lucasPo').html(data[2].position);
+                $('#lucasSt').html(data[2].stacksize);
+
+                $('#johnPl').html(data[3].playerName);
+                $('#johnPo').html(data[3].position);
+                $('#johnSt').html(data[3].stacksize);
+
+                $('#askmewhateverPl').html(data[4].playerName);
+                $('#askmewhateverPo').html(data[4].position);
+                $('#askmewhateverSt').html(data[4].stacksize);
+
+                $('#AdolfPl').html(data[5].playerName);
+                $('#AdolfPo').html(data[5].position);
+                $('#AdolfSt').html(data[5].stacksize);
 
             $('#betButton').click(function() {
                var vis = document.getElementsByClassName("chips");
@@ -96,45 +137,6 @@ $(document).ready(function () {
                setpot6;
                 animate();
               });
-          $('#loadButton').click(function() {
-
-                  //set table to visible/invisible
-              hideButton("loadButton");
-              showButton("foldButton");
-              showButton("betButton");
-
-              //sets player-colors darker
-              var colors = document.getElementsByClassName("player");
-              for(i=0; i<colors.length; i++) {
-              colors[i].style.backgroundColor = "#B0B0B0";
-              }
-
-              //secondPlayer onMove
-              document.getElementById("secondseat").style.borderColor = "blue";
-
-              document.getElementById("olePl").innerHTML = data[0].playerName;
-              document.getElementById("olePo").innerHTML = data[0].position;
-              document.getElementById("oleSt").innerHTML = data[0].stacksize;
-              
-              document.getElementById("benPl").innerHTML = data[1].playerName;
-              document.getElementById("benPo").innerHTML = data[1].position;
-              document.getElementById("benSt").innerHTML = data[1].stacksize;
-              
-              document.getElementById("lucasPl").innerHTML = data[2].playerName;
-              document.getElementById("lucasPo").innerHTML = data[2].position;
-              document.getElementById("lucasSt").innerHTML = data[2].stacksize;
-              
-              document.getElementById("johnPl").innerHTML = data[3].playerName;
-              document.getElementById("johnPo").innerHTML = data[3].position;
-              document.getElementById("johnSt").innerHTML = data[3].stacksize;
-              
-              document.getElementById("askmewhateverPl").innerHTML = data[4].playerName;
-              document.getElementById("askmewhateverPo").innerHTML = data[4].position;
-              document.getElementById("askmewhateverSt").innerHTML = data[4].stacksize;
-              
-              document.getElementById("AdolfPl").innerHTML = data[5].playerName;
-              document.getElementById("AdolfPo").innerHTML = data[5].position;
-              document.getElementById("AdolfSt").innerHTML = data[5].stacksize;
 
               $('#foldButton').click(function() {
                   //sets player-colors to default and values to zero
