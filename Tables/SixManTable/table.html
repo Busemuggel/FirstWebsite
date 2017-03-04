@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Spielregeln</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="list.css">
+    </head>
+    <body>
+<div class="textalign">
+
+            <div id ="container">
+                <div id="firstseat" class="player"></div>
+                <div id="seat1Chips" class="chips cmove1">10$</div>
+
+                <div id="secondseat" class="player"></div>
+                <div id="seat2Chips" class="chips cmove2">8$</div>
+
+                <div id="thirdseat" class="player"></div>
+                <div id="seat3Chips" class="chips cmove3">7$</div>
+
+                <div id="fourthseat" class="player"></div>
+                <div id="seat4Chips" class="chips cmove4">12$</div>
+
+                <div id="fifthseat" class="player"></div>
+                <div id="seat5Chips" class="chips cmove5">21$</div>
+
+                <div id="sixthseat" class="player"></div>
+                <div id="seat6Chips" class="chips cmove6"></div>
+
+                <div id="pot"></div>
+
+                <div id="buttonHolder">
+                    <button id="loadButton">Start animation</button>
+                    <button id="foldButton" class="two">Fold</button>
+                    <button id="betButton" class="two">Bet</button>
+                </div>
+
+
+                <table id="tabledesign">
+                    <caption><span style="color:#ffd700">Table standings</span></caption>
+                    <thead>
+                        <tr>
+                            <th><a>Playername</a></th>
+                            <th><a>Position</a></th>
+                            <th>Stacksize</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td id="olePl"></td>
+                        <td id="olePo"></td>
+                        <td id="oleSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="benPl"></td>
+                        <td id="benPo"></td>
+                        <td id="benSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="lucasPl"></td>
+                        <td id="lucasPo"></td>
+                        <td id="lucasSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="johnPl"></td>
+                        <td id="johnPo"></td>
+                        <td id="johnSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="askmewhateverPl"></td>
+                        <td id="askmewhateverPo"></td>
+                        <td id="askmewhateverSt"></td>
+                    </tr>
+                    <tr>
+                        <td id="AdolfPl"></td>
+                        <td id="AdolfPo"></td>
+                        <td id="AdolfSt"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="table.js"></script>
+        <script type="text/javascript" src="../../lib/move.js"></script>
+    </body>
+</html>
