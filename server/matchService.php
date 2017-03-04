@@ -21,33 +21,28 @@ $content[] = 'In einer Runde Moneygame können bis zu 10 Spieler teilnehmen, die
             Nachdem ....';
 
 function handleUrl($news, $content){
+    $db = New DatabaseController(); 
     if( isset($_GET['news'])) {
         return $news[$_GET['news']]; 
     } elseif( isset($_GET['content'])) {
         return $content[$_GET['content']]; 
    } elseif( isset($_GET['players'])) {    
-        $result = array();
-        $result[] = new Player("Ole", "1", "1540");
-        $result[] = new Player("Ben", "2", "2440");
-        $result[] = new Player("Lucas", "3", "725");
-        $result[] = new Player("John", "4", "1825");
-        $result[] = new Player("askmewhatever", "5", "2556");
-        $result[] = new Player("Adolf", "6", "6230");
-
-        return json_encode($result);
-    }   
-
-     /*    elseif( isset($_GET['players'])) {
-            //HIER MUSST DU DEN DatabaseController aufrufen
-        $result = New DatabaseController();    
-        $result->getPlayers();
+        //HIER MUSST DU DEN DatabaseController aufrufen   
+        return json_encode($db->getPlayers());
      //   $result[] = new Player($players);
          return json_encode($result);     
-        }    */
+        }   
 
     //matchService.php?date=true
     elseif( isset($_GET['date'])) {
         return date("l"); 
+    }
+    // http://localhost/Firstwebsite/server/matchService.php?bet=true&player=Adolf&amount=88
+    // http://localhost/Firstwebsite/server/matchService.php?bet=true&player=Ole&amount=120
+    elseif( isset($_GET['bet'])) {
+        $playerName = $_GET['player'];
+        $amount = $_GET['amount'];
+        return "{'action' : 'bet', 'message' : '".$db->placeBet($playerName, $amount)."'}"; 
     }
     return "hallo welt";
 }

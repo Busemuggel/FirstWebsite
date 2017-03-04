@@ -2,11 +2,17 @@
 include 'Player.php';
 class DatabaseController {
 
-    public static function getPlayers() {
+    private $mysqli;
+
+    function __construct() {
+        $this->mysqli = new mysqli("localhost", "root", "", "moneygame");
+    }
+    
+    public function getPlayers() {
         $players = array();
-        $mysqli = new mysqli("localhost", "root", "", "moneygame");
+        
         /* return users from database */
-        if ($result = $mysqli->query("select * from player")) {
+        if ($result = $this->mysqli->query("select * from player")) {
 
             /* fetch associative array */
             while ($row = $result->fetch_assoc()) {                              
@@ -18,5 +24,23 @@ class DatabaseController {
         }
         unset($mysqli);
         return $players;
+    }
+
+    public function placeBet($playerName, $amount) {
+        /* return users from database */
+        if ($result = $this->mysqli->query("SELECT stacksize FROM player WHERE name LIKE '".$playerName."'")) {
+            /* fetch associative array */
+            while ($row = $result->fetch_assoc()) {                            
+                $stacksize = $row["stacksize"];
+                $stacksize -= $amount;
+                $this->mysqli->query("UPDATE player SET stacksize = ".$stacksize." WHERE name LIKE '".$playerName."'");
+                break;
+            }
+
+            /* free result set */
+            $result->free();
+        }
+        unset($mysqli);
+        return "updated player ".$playerName." to a stacksize of: ".$stacksize;
     }
 }
